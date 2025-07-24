@@ -29,7 +29,7 @@ app = FastAPI(
 )
 
 # CORS configuration
-ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://localhost:8080,https://m-ahmad-portfolio-dev.netlify.app,https://my-portfolio-nu-ten-78.vercel.app/").split(",")
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://localhost:8080,https://m-ahmad-portfolio-dev.netlify.app").split(",")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
